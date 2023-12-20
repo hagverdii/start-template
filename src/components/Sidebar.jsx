@@ -20,22 +20,24 @@ const Sidebar = () => {
 
       {/* Navigation buttons of sidebar */}
       <nav className="flex w-full flex-col">
-        <NavLink to="/" className={({ isActive }) => (isActive ? 'active-nav-element' : 'nav-element')}>
+        <NavLink end to="/" className={({ isActive }) => (isActive ? 'active-nav-element' : 'nav-element')}>
           Home
         </NavLink>
         <NavLink
+          end
           to="/private"
           className={({ isActive }) => (isActive ? 'active-nav-element' : 'nav-element')}
         >
           PrivatePage
         </NavLink>
         <NavLink
+          end
           to="/unauthorized"
           className={({ isActive }) => (isActive ? 'active-nav-element' : 'nav-element')}
         >
           Unauthorized
         </NavLink>
-        <NavLink to="*" className={({ isActive }) => (isActive ? 'active-nav-element' : 'nav-element')}>
+        <NavLink end to="*" className={({ isActive }) => (isActive ? 'active-nav-element' : 'nav-element')}>
           Missing
         </NavLink>
       </nav>
